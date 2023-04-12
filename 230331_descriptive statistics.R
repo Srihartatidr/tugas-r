@@ -49,7 +49,7 @@ main()
 boxplot(w5_pef_lj_age_sex_height_pef$pef)
 
 #mendeteksi outlier dari variabel pef
-boxplot(w5_pef_lj_age_sex_height_pef$pef)
+boxplot(w5_pef_lj_age_sex_height_pef$pef, plot = FALSE)$out)
 
 #mendeteksi nilai minimum dari outlier dari variabel pef
 min(boxplot(w5_pef_lj_age_sex_height_pef$pef, plot = FALSE)$out)
@@ -65,9 +65,9 @@ cor.test(w5_pef_lj_age_sex_height_pef$pef, w5_pef_lj_age_sex_height_pef$height, 
 #membuat linear regresi
 lm(y~x,data=ds)
 lm(pef~height, data=w5_pef_lj_age_sex_height_pef)
-#persamaannya menjadi y=intercept + slope x
-#persamaan y=alpha + beta x
-#menjadi pef= -840.31 + 7.79 height
+#persamaannya --> y=intercept + slope x
+#persamaan --> y=alpha + beta x
+#persamannya menjadi --> pef= -840.31 + 7.79 height
 #setiap penambahan 1 cm tinggi badan akan menambah pef sebanyak 7.871 L/menit
 
 #membuat objek dari model regresi linear
